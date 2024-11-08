@@ -12,6 +12,7 @@ public class HomeWork2 {
         boolean JavaIsAmazing = true;
         float Pi = 3.14159F;
         System.out.println("CurrentWorldPopulation is " + CurrentWorldPopulation);
+        System.out.println("CarsProducedThisYear is " + CarsProducedThisYear);
         System.out.println("FirstLetterInAlphabet is " + FirstLetterInAlphabet);
         System.out.println("JavaIsAmazing is " + JavaIsAmazing);
         System.out.println("Pi is " + Pi);
