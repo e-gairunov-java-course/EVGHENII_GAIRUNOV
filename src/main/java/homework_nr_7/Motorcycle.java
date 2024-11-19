@@ -3,6 +3,7 @@ package homework_nr_7;
 public class Motorcycle extends Vehicle{
     private double engineCapacity;
     private boolean hasABS;
+
     @Override
     public void displayInfo(){
         System.out.println("Brand of vehicle is: " + brand);

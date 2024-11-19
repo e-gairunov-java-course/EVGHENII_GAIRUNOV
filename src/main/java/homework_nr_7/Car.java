@@ -3,6 +3,7 @@ package homework_nr_7;
 public class Car extends Vehicle{
     private int numberOfDoors;
     private boolean isElectric;
+
     @Override
     public void displayInfo(){
         System.out.println("Brand of vehicle is: " + brand);
