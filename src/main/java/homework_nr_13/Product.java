@@ -1,6 +1,7 @@
 package homework_nr_13;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Product {
@@ -37,7 +38,8 @@ public class Product {
 
         System.out.print("\nThe most expensive product is ");
         System.out.println(productList.stream().filter(e -> e.getCategory() == Category.ELECTRONICS)
-                .reduce((Product o1, Product o2) -> o1.getPrice() > o2.getPrice() ? o1 : o2)
+                .max(Comparator.comparingDouble(Product::getPrice))
+//                .reduce((Product o1, Product o2) -> o1.getPrice() > o2.getPrice() ? o1 : o2)
                 .map(Product::getName).orElse("no product"));
 
         System.out.print("\nThe quantity of food products is ");
