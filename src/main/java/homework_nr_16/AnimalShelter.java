@@ -28,6 +28,7 @@ public class AnimalShelter <T extends Animal>{
         dogAnimalShelter.addNewAnimal(dogs,new Dog());
         dogAnimalShelter.addNewAnimal(dogs,new Dog());
         dogAnimalShelter.addNewAnimal(dogs,new Dog());
+        dogAnimalShelter.addNewAnimal(dogs,new Dog());
         dogAnimalShelter.makeSounds(dogs);
     }
 }
