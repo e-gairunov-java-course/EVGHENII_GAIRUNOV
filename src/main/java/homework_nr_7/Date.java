@@ -6,9 +6,9 @@ public class Date {
     private int year;
     private boolean isAC;
     private boolean isCorrect;
-    private static final String[] months = {"January", "February", "March", "April",
+    private static final String[] months = {"","January", "February", "March", "April",
     "May", "June", "July", "August", "September", "October", "November", "December"};
-    private static final int[] numOfDays = {31,28,31,30,31,30,31,31,30,31,30,31};
+    private static final int[] numOfDays = {0,31,28,31,30,31,30,31,31,30,31,30,31};
 
     public Date(int day, int month, int year) {
         calcYear(year);
@@ -84,15 +84,19 @@ public class Date {
             return;
         }
         System.out.print("\nDate in " + (text ? "text" : "numerical") + " format is: ");
-        System.out.print(day + (text ? " " + months[month-1] + " " : "/" + month + "/") + year);
+        System.out.print(day + (text ? " " + months[month] + " " : "/" + month + "/") + year);
         System.out.println(isAC ? "" : " B.C.");
+    }
+
+    public String toString(){
+        return day + " " + months[month] + " " + year;
     }
 
     public static void main(String[] args) {
         Date date = new Date(1,1,100);
         date.setDay(29);
-        date.setMonth(2);
-        date.setYear(-399);
+        date.setMonth(12);
+        date.setYear(1400);
         date.displayDate();
         date.displayDateText(true);
     }
